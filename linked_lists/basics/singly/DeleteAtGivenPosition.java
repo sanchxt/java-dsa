@@ -1,6 +1,6 @@
 package linked_lists.basics.singly;
 
-public class DeleteFirstNode {
+public class DeleteAtGivenPosition {
   private ListNode head;
 
   private static class ListNode {
@@ -24,18 +24,22 @@ public class DeleteFirstNode {
     }
   }
 
-  public ListNode deleteFirstNode() {
-    if (head == null) {
-      return null;
+  public void deleteAtGivenPosition(int position) {
+    if (position == 1) {
+      head = head.next;
+    } else {
+      ListNode previous = head;
+      int count = 1;
+      while (count < position - 1) {
+        previous = previous.next;
+        count++;
+      }
+      previous.next = previous.next.next;
     }
-    ListNode temp = head;
-    head = head.next;
-    temp.next = null;
-    return temp;
   }
 
   public static void main(String[] args) {
-    DeleteFirstNode linkedList = new DeleteFirstNode();
+    DeleteAtGivenPosition linkedList = new DeleteAtGivenPosition();
     linkedList.head = new ListNode(10);
     ListNode second = new ListNode(1);
     ListNode third = new ListNode(8);
@@ -47,7 +51,7 @@ public class DeleteFirstNode {
 
     linkedList.displayLinkedList();
 
-    System.out.println("\nremoving the first node: " + linkedList.deleteFirstNode().data);
+    linkedList.deleteAtGivenPosition(2);
     System.out.println();
     linkedList.displayLinkedList();
   }
