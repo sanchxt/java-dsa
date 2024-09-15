@@ -85,6 +85,7 @@ public class DeleteLast {
     }
     tail = tail.prev;
     temp.prev = null;
+    length--;
     return temp;
   }
 

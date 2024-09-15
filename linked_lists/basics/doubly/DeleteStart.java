@@ -85,6 +85,7 @@ public class DeleteStart {
     }
     head = head.next;
     temp.next = null;
+    length--;
     return temp;
   }
 
