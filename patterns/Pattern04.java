@@ -1,5 +1,11 @@
 package patterns;
 
+// 1
+// 22
+// 333
+// 4444
+// 55555
+
 public class Pattern04 {
   public static void pattern(int n) {
     for (int i = 0; i < n; i++) {

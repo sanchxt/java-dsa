@@ -1,5 +1,11 @@
 package patterns;
 
+// * * * * *
+// * * * *
+// * * *
+// * *
+// *
+
 public class Pattern05 {
   public static void pattern(int n) {
     for (int i = 0; i < n; i++) {
