@@ -16,9 +16,9 @@ public class Pattern10 {
     for (int i = 0; i < totalRows; i++) {
       int stars = i < n ? i + 1 : totalRows - i;
       for (int j = 0; j < stars; j++) {
-        System.err.print("* ");
+        System.out.print("* ");
       }
-      System.err.println();
+      System.out.println();
     }
   }
 
