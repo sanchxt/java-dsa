@@ -1,6 +1,6 @@
 public class KadaneAlgoFollowUp {
+  // tc: O(N) , sc: O(1)
   static long maxSubarraySum(int arr[]) {
-    int n = arr.length;
     long maximum = Long.MIN_VALUE;
     long sum = 0;
     int start = 0, resultStart = -1, resultEnd = -1;
