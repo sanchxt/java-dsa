@@ -43,6 +43,7 @@ public class LongestSequence {
     return longest;
   }
 
+  // tc: O(3N) , sc: O(N)
   static int longestSequenceOptimal(int arr[]) {
     if (arr.length == 0) return 0;
     int longest = 1;
